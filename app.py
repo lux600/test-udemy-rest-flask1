@@ -5,6 +5,7 @@ from flask_jwt import JWT
 
 from db import db
 from security import authenticate, identity as identity_function
+from resources.home import Home
 from resources.user import UserRegister
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
@@ -39,6 +40,8 @@ def customized_error_handler(error):
 
 
 api.add_resource(UserRegister,'/register') #
+
+api.add_resource(Home,'/') #
 
 api.add_resource(Item, '/item/<string:name>')  # http://127.0.0.1:5000/item/park
 api.add_resource(ItemList, '/items')  # http://127.0.0.1:5000/items
