@@ -116,3 +116,9 @@ $ pip install -r requirements.txt
 (가상환경) $ pip install Flask-SQLAlchemy
 ~~~
 
+
+## uwsgi
+~~~
+(가상환경) $ pip install uwsgi
+~~~
+
