@@ -20,6 +20,11 @@ git branch -M main
 git push -u origin main
 ~~~
 
+
+## 기존 모두 삭제하고 github 다시 올릭 
+~~~
+git push -u --force origin main
+~~~
 ---
 
 - https://www.udemy.com/course/rest-api-flask-and-python/
