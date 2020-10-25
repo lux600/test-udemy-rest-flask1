@@ -1,3 +1,5 @@
+import os
+
 from datetime import timedelta
 from flask import Flask, jsonify
 from flask_restful import Api
@@ -12,7 +14,8 @@ from resources.store import Store, StoreList
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:///data.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = 'jose'
@@ -37,6 +40,10 @@ def customized_error_handler(error):
         'code' : error.status_code
     }), error.status_code
 
+
+# @app.before_first_request
+# def create_tables():
+#     db.create_all()
 
 
 api.add_resource(UserRegister,'/register') #

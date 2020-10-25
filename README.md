@@ -122,3 +122,19 @@ $ pip install -r requirements.txt
 (가상환경) $ pip install uwsgi
 ~~~
 
+## Postgres
+- mac
+~~~
+$ brew install postgresql
+~~~
+
+- centos
+~~~
+$ sudo yum install postgresql postgresql-devel python-devel
+~~~
+- install
+~~~
+$ pip install psycopg2
+$ pip install psycopg2-binary
+~~~
+
