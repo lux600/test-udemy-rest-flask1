@@ -17,11 +17,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'jose'
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
-
 app.config['JWT_AUTH_URL_RULE'] ='/login'
 app.config['JWT_EXPIRATION_DELTA'] = timedelta(seconds=18000)
 # app.config['JWT_AUTH_USERNAME_KEY'] = 'email'  # key : email
@@ -54,4 +49,4 @@ api.add_resource(Store, '/store/<string:name>')
 
 if __name__ == '__main__' :
     db.init_app(app)
-    app.run(port=3000, debug=True)
+    app.run(port=5000, debug=True)
