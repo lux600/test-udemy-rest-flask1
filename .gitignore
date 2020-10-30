@@ -3,3 +3,6 @@ __pycache__
 __pycache__/
 data.db
 *.pyc
+uwsgi.ini
+
+front_react/node_modules/

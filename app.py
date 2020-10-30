@@ -13,10 +13,11 @@ from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./front_react/build', static_url_path='')
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['PROPAGATE_EXCEPTIONS'] = True
 
 app.secret_key = 'jose'
 api = Api(app)
@@ -45,10 +46,13 @@ def customized_error_handler(error):
 # def create_tables():
 #     db.create_all()
 
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 api.add_resource(UserRegister,'/register') #
 
-api.add_resource(Home,'/') #
+#api.add_resource(Home,'/') #
 
 api.add_resource(Item, '/item/<string:name>')  # http://127.0.0.1:5000/item/park
 api.add_resource(ItemList, '/items')  # http://127.0.0.1:5000/items

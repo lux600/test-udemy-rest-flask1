@@ -1,3 +1,7 @@
+## Stores REST Api
+This is built with Flask, Flask-RESTful, Flask-JWT, and Flask-SQLAlchemy.
+
+
 ## GitHub
 - ssh
     - git@github.com:lux600/test-udemy-rest-flask1.git
