@@ -5,4 +5,4 @@ from flask_restful import Resource
 class Home() :
     def get(self):
         # return {"message":'Hello World!'}
-        return render_template("../front_react/publish/index.html")
+        return render_template("../front_react/build/index.html")
