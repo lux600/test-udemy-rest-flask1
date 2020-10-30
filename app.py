@@ -46,13 +46,13 @@ def customized_error_handler(error):
 # def create_tables():
 #     db.create_all()
 
-@app.route('/')
-def index():
-    return app.send_static_file('index.html')
+# @app.route('/')
+# def index():
+#     return app.send_static_file('index.html')
 
 api.add_resource(UserRegister,'/register') #
 
-#api.add_resource(Home,'/') #
+api.add_resource(Home,'/') #
 
 api.add_resource(Item, '/item/<string:name>')  # http://127.0.0.1:5000/item/park
 api.add_resource(ItemList, '/items')  # http://127.0.0.1:5000/items
