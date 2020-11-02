@@ -14,7 +14,7 @@ from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
 
-app = Flask(__name__, static_folder='./front_react/public', static_url_path='')
+app = Flask(__name__, static_folder='./front_react/build', static_url_path='')
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
