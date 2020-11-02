@@ -2,6 +2,7 @@ import os
 
 from datetime import timedelta
 from flask import Flask, jsonify
+from flask import send_from_directory
 from flask_restful import Api
 from flask_jwt import JWT
 
