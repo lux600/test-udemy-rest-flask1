@@ -1,25 +1,17 @@
 import React from 'react';
-import { Route, Link} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom';
+import Layout from './layouts/Layout';
 
-import First  from './containers/First';
-import Second  from './containers/Second';
+import 'react-toastify/dist/ReactToastify.min.css';
+import 'react-datetime/css/react-datetime.css';
+import 'react-image-lightbox/style.css';
 
-// import logo from './logo.svg';
-// import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div>
-        <ul>
-            <li><Link to={"/first"}>First</Link> </li>
-            <li><Link to={"/second"}>Second</Link> </li>
-        </ul>
-      Hello World React !!! add3
-        <hr/>
-          <Route  path={'/first'} component={First}/>
-          <Route  path={'/second'} component={Second}/>
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Layout />
+    </Router>
   );
-}
+};
 
 export default App;
