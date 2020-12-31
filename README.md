@@ -39,6 +39,15 @@ git push -u --force origin main
 - https://github.com/tecladocode/rest-api-sections/
 ---
 
+## local 
+~~~
+/Users/mac/Dropbox/pythonproject/dev_book/python_lec_rest_flash_1/code_sqlalchemy
+~~~
+
+![image](./assets/lec2.png)
+
+---
+
 - virtualenv
 ~~~
 $ virtualenv venv --python=python3.5
