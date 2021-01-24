@@ -54,7 +54,7 @@ $ virtualenv venv --python=python3.5
 
 $ source venv/bin/activate
 ~~~
-- pyenv virtualenv
+- pyenv virtualenv 1
 ```c {.line-numbers}
 $ pyenv virtualenv 3.7.5 python_rest_flask_udemy
 
