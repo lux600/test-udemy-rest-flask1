@@ -55,7 +55,7 @@ $ virtualenv venv --python=python3.5
 $ source venv/bin/activate
 ~~~
 - pyenv virtualenv
-~~~
+```javascript class:"lineNo"
 $ pyenv virtualenv 3.7.5 python_rest_flask_udemy
 
 Looking in links: /var/folders/4v/7ql0tb592lz069rp49s9fp080000gn/T/tmpw3sol5cq
@@ -63,7 +63,7 @@ Requirement already satisfied: setuptools in /Users/mac/.pyenv/versions/3.7.5/en
 Requirement already satisfied: pip in /Users/mac/.pyenv/versions/3.7.5/envs/python_rest_flask_udemy/lib/python3.7/site-packages (19.2.3)
 
 /Users/mac/.pyenv/version
-~~~
+```
 
 - 현재 생성된 가상환경 
 ~~~
