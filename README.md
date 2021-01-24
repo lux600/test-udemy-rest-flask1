@@ -55,7 +55,7 @@ $ virtualenv venv --python=python3.5
 $ source venv/bin/activate
 ~~~
 - pyenv virtualenv
-```javascript class:"lineNo"
+```javascript {.line-numbers}
 $ pyenv virtualenv 3.7.5 python_rest_flask_udemy
 
 Looking in links: /var/folders/4v/7ql0tb592lz069rp49s9fp080000gn/T/tmpw3sol5cq
